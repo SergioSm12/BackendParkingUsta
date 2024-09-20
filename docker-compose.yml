@@ -11,8 +11,8 @@ services:
       DB_PASSWORD_PROD: root
     restart: always
     depends_on:
-      parking_app:
-          condition: service_healthy
+      - parking_app  
+
   parking_app:
     image: mysql:8.0.33
     ports:
